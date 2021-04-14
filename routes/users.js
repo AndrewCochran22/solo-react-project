@@ -50,7 +50,7 @@ router.post('/register', async (req, res) => {
     email: req.body.email
   })
   // Respond with success message
-  return res.status(201).json("Successfully registered.")
+  return res.status(201).json({})
 })
 
 router.post('/login', async (req, res) => {
