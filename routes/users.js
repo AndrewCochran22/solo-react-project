@@ -98,4 +98,10 @@ router.get('/logout', (req, res) => {
   })
 })
 
+router.get('/rsvp', async (req, res) => {
+  const user = await models.User.findByPk(req.session.user.id)
+  const posts = await user.getRsvpPosts()
+  res.json(posts)
+})
+
 module.exports = router;

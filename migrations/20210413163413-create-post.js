@@ -14,7 +14,10 @@ module.exports = {
       content: {
         type: Sequelize.STRING
       },
-      date: {
+      startDate: {
+        type: Sequelize.DATE
+      },
+      endDate: {
         type: Sequelize.DATE
       },
       UserId: {

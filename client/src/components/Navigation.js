@@ -9,8 +9,8 @@ export default function Navigation() {
                 <Navbar.Brand className="d-flex" as={Link} to="/">EventScheduler</Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/posts">Posts</Nav.Link>
-                    <Nav.Link as={Link} to="/calendar">Calendar</Nav.Link>
+                    <Nav.Link as={Link} to="/posts">Events</Nav.Link>
+                    <Nav.Link as={Link} to="/calendars">Calendar</Nav.Link>
                 </Nav>
                 <Form inline>
                     <InputGroup>

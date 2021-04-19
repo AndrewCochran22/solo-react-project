@@ -13,12 +13,15 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Post.belongsTo(models.User);
       Post.hasMany(models.Comment);
+      Post.belongsToMany(models.User, { as: 'RsvpUsers', through: models.Rsvp });
+      Post.hasMany(models.Rsvp)
     }
   };
   Post.init({
     title: DataTypes.STRING,
     content: DataTypes.STRING,
-    date: DataTypes.DATE,
+    startDate: DataTypes.DATE,
+    endDate: DataTypes.DATE,
     UserId: DataTypes.INTEGER
   }, {
     sequelize,

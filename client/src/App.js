@@ -5,7 +5,7 @@ import Posts from './pages/Posts'
 import Navigation from './components/Navigation';
 import Register from './pages/Register';
 import Login from './pages/Login';
-import Calendar from './pages/Calendar';
+import Calendars from './pages/Calendars';
 
 function App() {
   return (
@@ -26,8 +26,8 @@ function App() {
         <Route path="/login">
           <Login />
         </Route>
-        <Route path="/calendar">
-          <Calendar />
+        <Route path="/calendars">
+          <Calendars />
         </Route>
       </Switch>
     </Router>

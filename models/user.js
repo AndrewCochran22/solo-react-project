@@ -13,6 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       User.hasMany(models.Post);
       User.hasMany(models.Comment);
+      User.belongsToMany(models.Post, { as: 'RsvpPosts', through: models.Rsvp });
+      User.hasMany(models.Rsvp)
     }
   };
   User.init({
